@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <script>
+        function AddRow()
+        {
+            var p = document.getElementById('gridRadios1').checked;
+            var y = document.getElementById('gridRadios2').checked;
+            if (p == true && y == false)
+            {
+                var x = "Male";
+            }
+                else
+            {
+                var x = "Female";
+            }
+            var z = "";
+            if (document.getElementById('gridCheck1').checked == true) {
+                z += "JAVA";
+            }
+            if (document.getElementById('gridCheck2').checked == true) {
+                z += ", CSS";
+            }
+            if (document.getElementById('gridCheck3').checked == true) {
+                z += ", HTML";
+            }
+
+            y = document.getElementById("inputimage3").value;
+            document.getElementById("p12").innerHTML = "<b>" + document.getElementById("inputName3").value + "</b>" + "<br>" + x + "<br\>" + document.getElementById("inputEmail3").value ;
+            document.getElementById("a12").setAttribute("href", document.getElementById("inputlink3").value);
+            document.getElementById("a12").innerHTML = document.getElementById("inputlink3").value;
+            document.getElementById("img12").setAttribute("src", y);
+            document.getElementById("p13").innerHTML = z;
+        }
+        function myFunction() {
+            document.getElementById("inputimage3").value = "";
+            document.getElementById("inputName3").value = "";
+            document.getElementById("inputEmail3").value = "";
+            document.getElementById("inputlink3").value = "";
+            document.getElementById("inputimage3").value = "";
+
+        } 
+          
+    </script>
+    <style>
+        #footer {
+            position: sticky;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            height: 20px;
+            background: #222;
+            color: white;
+        }
+    </style>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Condensed:ital,wght@1,700&display=swap" rel="stylesheet">
+    <title>Information</title>
+    <link rel="icon" type="image/png" href="https://res-3.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco/kfbsfi8dpp82oeql7xap" />
+</head>
+<body>
+    
+        <div class="container-fluid d-flex justify-content-center" style="background-color:#00cc99">
+            <center><p class="my-2 text-white" style="font-family: 'Pacifico', cursive; font-family: 'Roboto Condensed', sans-serif; font-size:x-large">Student Enrollment Form</p></center>
+        </div>
+        <div class="jumbotron jumbotron-fluid bg-white">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="container-fluid col-lg-6 col-md-6 col-sm-12 col-12 border-right border-success">
+
+                        <!--<form id="myForm">-->
+                            <div class="form-group row">
+                                <label for="inputName3" class="col-sm-2 col-form-label">Name</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="inputName3" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                                <div class="col-sm-10">
+                                    <input type="email" class="form-control" id="inputEmail3" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputlink3" class="col-sm-2 col-form-label">Website</label>
+                                <div class="col-sm-10">
+                                    <input type="url" class="form-control" id="inputlink3" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputlink3" class="col-sm-2 col-form-label">Image</label>
+                                <div class="col-sm-10">
+                                    <input type="url" class="form-control" id="inputimage3" placeholder="">
+                                </div>
+                            </div>
+
+                            <fieldset class="form-group">
+                                <div class="row">
+                                    <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
+                                    <div class="col-sm-10">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1">
+                                            <label class="form-check-label" for="gridRadios1">
+                                                Male
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                                            <label class="form-check-label" for="gridRadios2">
+                                                Female
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <div class="form-group row">
+                                <div class="col-sm-2">Skills</div>
+                                <div class="col-sm-10 col-md-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                        <label class="form-check-label" for="gridCheck1">
+                                            JAVA
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-10 col-md-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck2">
+                                        <label class="form-check-label" for="gridCheck1">
+                                            CSS
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-10 col-md-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck3">
+                                        <label class="form-check-label" for="gridCheck1">
+                                            HTML
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group row my-4">
+                                <div class="col-sm-6 col-md-3 my-1">
+                                    <button type="submit" class="btn btn-primary" onclick="AddRow()">Enroll Student</button>
+                                </div>
+
+                                <div class="col-sm-6 col-md-9 my-1">
+                                    <button type="reset"  id="btn" class="btn btn-danger" onclick="myFunction()">Clear</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="container-fluid col-lg-6 col-md-6 col-sm-12 col-12">
+                        <center><p class="my-2 text-dark" style="font-family: 'Pacifico', cursive; font-family: 'Roboto Condensed', sans-serif; font-size:large">Enrolled Students</p></center>
+                        <center>
+                            <table class="my-5" id="show" border ="2">
+                                <tr>
+                                    <th class ="text-white p-1 w-75" style="background-color:#ace600;font-family: 'Pacifico', cursive; font-family: 'Roboto Condensed', sans-serif; font-size:medium">Description</th>
+                                    <th class ="text-white p-1 w-25" style="background-color:#ace600;font-family: 'Pacifico', cursive; font-family: 'Roboto Condensed', sans-serif; font-size:medium">Image</th>
+                                </tr>
+                                <tr>
+                                    <td id="cell1">
+                                        <p id="p12" ></p>
+                                        <a href="" id="a12"></a>
+                                        <p id="p13"></p>
+                                    </td>
+                                    <td id="cell2">
+                                        <center><img src="" id="img12" style="height: 70px; width : 70px;" /></center>
+                                    </td>
+                                </tr>
+                            </table>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <footer class="bg-light text-center text-lg-start position-sticky p-0 m-0" id="footer">
+        <div class="text-center" style="background-color:#00cc99 ">
+            <p class="text-white " style="font-family: 'Pacifico', cursive; font-family: 'Roboto Condensed', sans-serif; font-size: medium">Copyright 2020-2021 by Freasher Training</p>
+        </div>
+        <!-- Copyright -->
+    </footer>
+</body>
+</html>
